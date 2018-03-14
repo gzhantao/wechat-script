@@ -1,0 +1,18 @@
+@import '/pages/report/report.wxss';
+.smscode{
+  display: flex;
+  position: relative;
+}
+.smscode .inpsms{
+  width:55% !important;
+}
+.smscode .btnsms{
+  width:30%;
+  height:80rpx;
+  font-size:24rpx;
+  line-height:80rpx;
+  position: absolute;
+  right: 0rpx;
+  top:0rpx;
+  margin: 0rpx !important;
+}

@@ -1,0 +1,15 @@
+<view class="body">
+  <view class="main">
+    <block wx:for="{{list}}" wx:key="" wx:for-index="k" wx:for-item="v">
+      <view class="list" bindtap="_navigator" data-id='{{v.newsId}}'>
+        <view class="list_tit">
+          <view class="report_tit">{{v.title}}</view>
+          <view class="report_time">{{v.time}}</view>
+        </view>
+        <view src="" class="list_img">
+          <image src="/common/img/more.png"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

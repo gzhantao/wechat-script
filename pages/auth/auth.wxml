@@ -1,0 +1,20 @@
+<view class="body">
+  <form bindsubmit="formSubmit">
+    <view class="page-section">
+      <!-- <view class="label"></view> -->
+      <input class="input" type='number' placeholder="请输入您的新手机号" name="phone" bindinput="_phone"/>
+    </view>
+    <view class="page-section smscode">
+      <!-- <view class="label"></view> -->
+      <input class="input inpsms" type='number' placeholder="请输入验证码" name="smsCode"/>
+      <button class="btnsms" disabled="{{smsDisable}}" bindtap='_getSmsCode'>{{smsCodeTime}}</button>
+    </view>
+    <view class="page-section">
+      <!-- <view class="label"></view> -->
+      <input class="input" placeholder="请输入密码" name="password"/>
+    </view>
+    <view class="button_section">
+      <button type="primary" class="btn_primary" formType="submit">认证</button>
+    </view>
+  </form>
+</view>

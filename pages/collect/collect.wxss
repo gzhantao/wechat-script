@@ -1,0 +1,36 @@
+@import '/pages/my/my.wxss';
+.body{
+  padding-top:20rpx;
+}
+.main .list{
+  padding: 10rpx 20rpx;
+}
+.main .list .list_tit{
+  width: 90%;
+}
+.report_status{
+  width:20%;
+  line-height: 100rpx;
+  text-align: right
+}
+.list{
+  height:auto !important;
+  line-height: 50rpx !important;
+}
+.list_tit{
+  color:#000000;
+  
+}
+.report_time{
+  font-size:24rpx;
+  color:#A2A2A2;
+}
+.report_tit{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  line-height: 60rpx;
+}
+.list_img{
+  line-height: 100rpx;
+}

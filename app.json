@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#C00000",
+    "navigationBarTitleText": "xxx-小程序",
+    "navigationBarTextStyle": "#FFFFFF"
+  },
+  "tabBar": {
+    "color": "#515151",
+    "selectedColor": "#C00000",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "common/img/nav_01.png",
+        "selectedIconPath": "common/img/nav_a_01.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "导航",
+        "iconPath": "common/img/nav_02.png",
+        "selectedIconPath": "common/img/nav_a_02.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "导航",
+        "iconPath": "common/img/nav_04.png",
+        "selectedIconPath": "common/img/nav_a_04.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "common/img/nav_05.png",
+        "selectedIconPath": "common/img/nav_a_05.png"
+      }
+    ]
+  }
+}

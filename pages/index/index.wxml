@@ -1,0 +1,158 @@
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+              <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+  </view>
+  <view class="tab">
+    <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+      <view class="tab_list {{fixedId == 1 ? 'active' : ''}}" bindtap="_changeFixed" data-fixedid="1">推荐</view>
+      <!-- <view class="tab_list {{fixedId == 2 ? 'active' : ''}}" bindtap="_changeFixed" data-fixedid="2">热点</view> -->
+      <block wx:for="{{type}}" wx:for-item="v" wx:key="" wx:for-index='k'>
+        <view class="tab_list {{typeId == v.typeId ? 'active' : ''}}" bindtap="_changeType" data-key="{{k}}" data-typeid="{{v.typeId}}">{{v.title}}</view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="child_tab">
+    <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+      <block wx:for="{{child}}" wx:for-item="v" wx:key="" wx:for-index='k'>
+        <view class="tab_list {{childTypeId == v.typeId ? 'active' : ''}}" bindtap="_changeChildType" data-typeid="{{v.typeId}}">{{v.title}}</view>
+      </block>
+    </scroll-view>
+  </view>
+  <block wx:if="{{fixedId == 1}}">
+    <view class="banner">
+      <swiper indicator-dots="" autoplay="true" interval="3000" duration="1000" circular="true">
+        <block wx:for="{{newsConfig.banner}}" wx:key="">
+          <swiper-item>
+            <view bindtap='_navigator' data-id='{{item.newsId}}'>
+              <image src="{{item.img}}" class="slide-image"/>
+              <view class='shadow'></view>
+              <view class="swiper_title">{{item.title}}</view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="banner horse">
+      <view class="horse_lable"><text>快报</text></view>
+      <swiper indicator-dots="" autoplay="false" interval="3000" duration="1000" vertical="true" indicator-color="#FFFFFF">
+        <block wx:for="{{newsConfig.horse}}" wx:key="">
+          <swiper-item>
+            <view bindtap='_navigator' data-id='{{item.newsId}}'>
+              <view class="horse_title">{{item.title}}</view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </block>
+  <view class="news">
+    <block wx:for="{{list}}" wx:key="" wx:for-item="v">
+      <block wx:if="{{v.blockType == 1}}">
+        <view class="news_list" bindtap='_navigator' data-id='{{v.newsId}}'>
+          <view class="news_left blockType1">
+            <view class='news_tit'>
+              {{v.title}}
+            </view>
+            <view class='news_good'>
+              <block wx:if="{{v.label != ''}}">
+                <view class="news_top">{{v.label}}</view>
+              </block>
+              <view class="news_com">{{v.comment}} 评</view>
+              <view class="news_lick">
+                <image src="/common/img/lick.png"></image> {{v.like}}
+              </view>
+              <view class="news_time">{{v.time}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+      <block wx:elif="{{v.blockType == 2}}">
+        <view class="news_list" bindtap='_navigator' data-id='{{v.newsId}}'>
+          <view class="news_left">
+            <view class='news_tit blockType2'>
+              {{v.title}}
+            </view>
+            <view class='news_good news_good2'>
+              <block wx:if="{{v.label != ''}}">
+                <view class="news_top">{{v.label}}</view>
+              </block>
+              <view class="news_com">{{v.comment}} 评</view>
+              <view class="news_lick">
+                <image src="/common/img/lick.png"></image> {{v.like}}
+              </view>
+              <view class="news_time">{{v.time}}</view>
+            </view>
+          </view>
+          <view class="news_img news_img_cin">
+            <block wx:for="{{v.img}}" wx:key="" wx:for-item="iv">
+              <image src='{{iv}}'></image>
+            </block>
+          </view>
+        </view>
+      </block>
+      <block wx:elif="{{v.blockType == 3}}">
+        <view class="news_list" bindtap='_navigator' data-id='{{v.newsId}}'>
+          <view class="news_left blockType1">
+            <view class='news_tit'>
+              {{v.title}}
+            </view>
+            <view class="news_img news_img_3" style="margin:10rpx 0rpx;">
+              <block wx:for="{{v.img}}" wx:key="" wx:for-item="iv">
+                <image src='{{iv}}'></image>
+              </block>
+            </view>
+            <view class='news_good'>
+              <block wx:if="{{v.label != ''}}">
+                <view class="news_top">{{v.label}}</view>
+              </block>
+              <view class="news_com">{{v.comment}} 评</view>
+              <view class="news_lick">
+                <image src="/common/img/lick.png"></image> {{v.like}}
+              </view>
+              <view class="news_time">{{v.time}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+      <block wx:elif="{{v.blockType == 4}}">
+        <view class="news_list" bindtap='_navigator' data-id='{{v.newsId}}'>
+          <view class="news_left blockType1">
+            <view class='news_tit'>
+              {{v.title}}
+            </view>
+            <view class="news_img news_img_4">
+              <block wx:for="{{v.img}}" wx:key="" wx:for-item="iv">
+                <image src='{{iv}}' class="videoImg"></image>
+              </block>
+              <image class="startimg" src="/common/img/start.png"></image>
+            </view>
+            <view class='news_good'>
+              <block wx:if="{{v.label != ''}}">
+                <view class="news_top">{{v.label}}</view>
+              </block>
+              <view class="news_com">{{v.comment}} 评</view>
+              <view class="news_lick">
+                <image src="/common/img/lick.png"></image> {{v.like}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </block>
+  </view>
+</view>

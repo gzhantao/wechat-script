@@ -1,0 +1,239 @@
+.weui-search-bar{
+  background-color: #C00000;
+  border-top:1px solid #C00000;
+}
+.searchbar-result{
+  margin-top: 0;
+  font-size: 14px;
+}
+.searchbar-result:before{
+  display: none;
+}
+.weui-cell{
+  padding: 12px 15px 12px 35px;
+}
+.weui-search-bar__cancel-btn{
+  color:#FFFFFF;
+}
+
+.tab{
+  display: flex;
+  background-color: #EEF0F1;
+}
+.tab .scroll-view_H{
+  white-space: nowrap;
+}
+.tab .scroll-view_H .tab_list{
+  display: inline-block;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  padding:0rpx 30rpx;
+  color: #aaa9b1;
+}
+.tab .scroll-view_H .active{
+  color:#C00000;
+  font-size:40rpx;
+}
+.news{
+   /* padding-top:10rpx; */
+}
+.news_list{
+  display: flex;
+  border-bottom: 1px solid #EEF0F1;
+  background-color: #FFFFFF;
+  padding:30rpx 20rpx;
+  position: relative;
+}
+.news_list .news_left{
+  width:70%;
+}
+.news_list .news_tit{
+  font-size: 30rpx;
+  color: #0C0C0C;
+  font-weight: 900;
+}
+.news_list .news_img_cin{
+  padding-left:10rpx;
+  margin: 0rpx !important;
+}
+
+.news_list .news_img{
+  margin:10rpx 0rpx;
+}
+.news_list .news_img image{
+  width:300rpx;
+  height:180rpx;
+  vertical-align: top;
+  border:none;
+}
+.news_list .news_good{
+  display: flex;
+  height:40rpx;
+  line-height: 40rpx;
+  font-size:26rpx;
+  position: absolute;
+  bottom: 16rpx;
+  color:#8F8F8F;
+}
+.news_list .news_good .news_com{
+  margin-right:20rpx;
+}
+.news_list .news_good .news_lick{
+  margin-right:20rpx;
+}
+.news_list .news_good .news_lick image{
+  width:32rpx;
+  height:32rpx;
+  vertical-align: top;
+  margin-top:3rpx;
+}
+
+
+
+.news_list .blockType1{
+  width:100%;
+  padding-bottom: 40rpx;
+}
+.news_list .blockType1 .news_tit{
+  margin-bottom: 20rpx;
+}
+.news_list .blockType2{
+  min-height: 120rpx;
+}
+.news_list .news_good2{
+  position: relative;
+  bottom: 0rpx;
+  margin-top:20rpx;
+}
+
+.child_tab{
+  display: flex;
+  background-color: #FFFFFF;
+}
+.child_tab .tab_list{
+  display: inline-block;
+  padding: 0rpx 24rpx;
+  background-color: #eeebeb;
+  margin:20rpx;
+  border-radius: 100rpx;
+  font-size:26rpx;
+  color:#a9a9b2;
+}
+.child_tab .active{
+  background-color: #C00000;
+  color:#FFFFFF;
+}
+.news_img_3{
+  display: flex;
+}
+.news_img_3 image{
+  height:150rpx !important;
+  padding:10rpx 1%;
+}
+
+.blockType1 .news_img_4 .videoImg{
+  width:100% !important;
+  max-width: 700rpx;
+  height: 400rpx;
+}
+.news_img_4{
+  position: relative;
+  text-align: center;
+}
+.news_img_4 .startimg{
+  height:60rpx !important;
+  width:60rpx !important;
+  position: absolute;
+  top:50%;
+  left:50%;
+  margin-left:-30rpx;
+  margin-top:-30rpx;
+}
+
+.weui-search-bar__label,.weui-search-bar__box{
+  background-color: #f6f5f4
+}
+.weui-search-bar__input{
+  color: #7a7a7a
+}
+.news_top{
+  color:red;
+  border:1rpx solid red;
+  border-radius: 10rpx;
+  margin-right: 20rpx;
+  line-height: 26rpx;
+  font-size:20rpx;
+  height:24rpx;
+  padding:0rpx 5rpx;
+  margin-top:5rpx;
+}
+
+
+
+/*轮播*/
+.banner swiper{
+  height:420rpx;
+}
+.banner swiper-item{
+  display: block;
+  position: relative;
+}
+.banner swiper-item .slide-image{
+  width:100%;
+  height:420rpx;
+}
+.banner swiper-item .swiper_title{
+  position: absolute;
+  bottom:20rpx;
+  z-index:100;
+  width:90%;
+  left:5%;
+  color:#FFFFFF;
+  font-size:30rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.banner .shadow{
+  width:150%;
+  height:110rpx;
+  position: absolute;
+  margin-left:-20%;
+  z-index:99;
+  bottom:0rpx;
+  opacity: 0.6;
+  box-shadow:0px -40rpx 40rpx #000000 inset; 
+}
+
+.horse{
+  display: flex;
+  background-color: #FFFFFF;
+  margin-bottom:2rpx;
+}
+.horse swiper{
+  height:60rpx !important;
+  width: 70%;
+}
+.horse .horse_title{
+  font-size:30rpx !important;
+  color:#000000 !important;
+  line-height:60rpx;
+  padding-top:3rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.horse .horse_lable{
+  width:150rpx;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  padding-top:3rpx;
+}
+.horse .horse_lable text{
+  background-color: #C00000;
+  border-radius: 10rpx;
+  color:#FFFFFF;
+  padding:0rpx 10rpx;
+}
